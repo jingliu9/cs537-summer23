@@ -45,7 +45,7 @@ void print_key_position(FILE *stream, const char *key, int64_t pos) {
     fprintf(stdout, "Key %s not found\n", key);
     return;
   }
-  fprintf(stdout, "Key %s found at position %ld\n", key, pos);
+  fprintf(stdout, "Key %s found at line %ld\n", key, pos);
 }
 
 void query_one_key(const char *fname, const char *key) {
