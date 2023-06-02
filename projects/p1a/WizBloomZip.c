@@ -84,9 +84,7 @@ int main(int argc, char *argv[]) {
   if (g_file_name) {
     if (g_key) {
       // query instead of compressing
-      if (g_bloom_file) {
-        query_one_key(g_file_name, g_key);
-      }
+      query_one_key(g_file_name, g_key);
     } else {
       assert(g_output);
       compress_one_file(g_file_name);
