@@ -14,9 +14,9 @@ int main(int argc, char** argv) {
   // Q: where to deal with the built in command?
   if (pid == 0) {
     // Child
-    char* args[] = {"ls", "-l", "-a", NULL};
+    char* args[] = {"/bin/ls", "-l", "-a", NULL};
     // what to do here
-    execv("/bin/ls", args);
+    execv(args[0], args);
     // what to do here
     fprintf(stderr, "Child failed to execv!\n");
   } else if (pid > 0) {

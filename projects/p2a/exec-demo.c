@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
   // tokens of a command
-  char *args[] = {"ls", "-l", "-R", "-a", NULL};
-  execv("/bin/ls", args);
+  char* args[] = {"/bin/ls", "-l", "-R", "-a", NULL};
+  execv(args[0], args);
   return 0;
 }
