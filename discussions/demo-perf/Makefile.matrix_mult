@@ -1,0 +1,19 @@
+all: matrix_mult_O0 matrix_mult_O3 matrix_mult_O3opt0 matrix_mult_O3opt1 matrix_mult_O3opt2
+
+matrix_mult_O0:
+	g++ matrix_mult.cc -O0 -o ./matrix_mult_O0
+
+matrix_mult_O3:
+	g++ matrix_mult.cc -O3 -o ./matrix_mult_O3
+
+matrix_mult_O3opt0:
+	g++ matrix_mult.cc -ffast-math -O3 -o ./matrix_mult_O3opt0
+
+matrix_mult_O3opt1:
+	g++ matrix_mult.cc -march=native -O3 -o ./matrix_mult_O3opt1
+
+matrix_mult_O3opt2:
+	g++ matrix_mult.cc -march=native -ffast-math -O3 -o ./matrix_mult_O3opt2
+
+clean:
+	rm -rf matrix_mult_O*
